@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity3">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="-45dp"
+        tools:layout_editor_absoluteY="-225dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/buttonImg6"
+                android:layout_width="255dp"
+                android:layout_height="78dp"
+                android:layout_marginTop="272dp"
+                android:text="Enviar"
+                android:textSize="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.503"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonImg5"
+                app:layout_constraintVertical_bias="0.176" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="386dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="12dp"
+                android:src="@mipmap/imagen6"
+                app:layout_constraintBottom_toTopOf="@+id/buttonImg6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonImg5"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <Button
+                android:id="@+id/buttonImg5"
+                android:layout_width="255dp"
+                android:layout_height="78dp"
+                android:text="Enviar"
+                android:textSize="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.791" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="386dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="48dp"
+                android:src="@mipmap/imagen5"
+                app:layout_constraintBottom_toTopOf="@+id/buttonImg5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonImg4"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/buttonImg4"
+                android:layout_width="255dp"
+                android:layout_height="78dp"
+                android:layout_marginTop="1336dp"
+                android:text="Enviar"
+                android:textSize="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.503"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="386dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="32dp"
+                android:src="@mipmap/imagen3"
+                app:layout_constraintBottom_toTopOf="@+id/buttonImg4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonImg3"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/buttonImg3"
+                android:layout_width="255dp"
+                android:layout_height="78dp"
+                android:text="Enviar"
+                android:textSize="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.451" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="386dp"
+                android:layout_height="242dp"
+                android:layout_marginTop="24dp"
+                android:src="@mipmap/imagen2"
+                app:layout_constraintBottom_toTopOf="@+id/buttonImg3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonImg2"
+                app:layout_constraintVertical_bias="0.666" />
+
+            <Button
+                android:id="@+id/buttonImg2"
+                android:layout_width="255dp"
+                android:layout_height="78dp"
+                android:text="Enviar"
+                android:textSize="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.288" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="386dp"
+                android:layout_height="242dp"
+                android:layout_marginTop="16dp"
+                android:src="@mipmap/imagen1"
+                app:layout_constraintBottom_toTopOf="@+id/buttonImg2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonImg1"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <Button
+                android:id="@+id/buttonImg1"
+                android:layout_width="255dp"
+                android:layout_height="78dp"
+                android:text="Enviar"
+                android:textSize="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.122" />
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="386dp"
+                android:layout_height="242dp"
+                android:layout_marginTop="24dp"
+                android:src="@mipmap/imagen4"
+                app:layout_constraintBottom_toTopOf="@+id/buttonImg1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

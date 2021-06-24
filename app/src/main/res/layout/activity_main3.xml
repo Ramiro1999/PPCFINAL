@@ -11,8 +11,9 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="-36dp"
-        tools:layout_editor_absoluteY="84dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -26,16 +27,17 @@
                 android:text="Enviar"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/buttonImg5"
                 app:layout_constraintVertical_bias="0.0" />
 
             <ImageView
                 android:id="@+id/imageView6"
-                android:layout_width="279dp"
-                android:layout_height="198dp"
+                android:layout_width="251dp"
+                android:layout_height="243dp"
                 android:layout_marginTop="12dp"
-                android:src="@mipmap/imagen6"
+                android:src="@mipmap/coronavirus6"
                 app:layout_constraintBottom_toTopOf="@+id/buttonImg6"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -55,10 +57,10 @@
 
             <ImageView
                 android:id="@+id/imageView5"
-                android:layout_width="279dp"
-                android:layout_height="198dp"
+                android:layout_width="250dp"
+                android:layout_height="231dp"
                 android:layout_marginTop="48dp"
-                android:src="@mipmap/imagen5"
+                android:src="@mipmap/coronavirus0"
                 app:layout_constraintBottom_toTopOf="@+id/buttonImg5"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -79,10 +81,10 @@
 
             <ImageView
                 android:id="@+id/imageView4"
-                android:layout_width="279dp"
-                android:layout_height="198dp"
+                android:layout_width="272dp"
+                android:layout_height="224dp"
                 android:layout_marginTop="32dp"
-                android:src="@mipmap/imagen3"
+                android:src="@mipmap/coronavirus4"
                 app:layout_constraintBottom_toTopOf="@+id/buttonImg4"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -102,10 +104,10 @@
 
             <ImageView
                 android:id="@+id/imageView3"
-                android:layout_width="279dp"
-                android:layout_height="198dp"
+                android:layout_width="274dp"
+                android:layout_height="229dp"
                 android:layout_marginTop="24dp"
-                android:src="@mipmap/imagen2"
+                android:src="@mipmap/coronavirus3"
                 app:layout_constraintBottom_toTopOf="@+id/buttonImg3"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -125,10 +127,10 @@
 
             <ImageView
                 android:id="@+id/imageView2"
-                android:layout_width="279dp"
-                android:layout_height="198dp"
+                android:layout_width="274dp"
+                android:layout_height="219dp"
                 android:layout_marginTop="16dp"
-                android:src="@mipmap/imagen1"
+                android:src="@mipmap/coronavirus2"
                 app:layout_constraintBottom_toTopOf="@+id/buttonImg2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -148,10 +150,10 @@
 
             <ImageView
                 android:id="@+id/imageView1"
-                android:layout_width="279dp"
-                android:layout_height="198dp"
+                android:layout_width="272dp"
+                android:layout_height="253dp"
                 android:layout_marginTop="24dp"
-                android:src="@mipmap/imagen4"
+                android:src="@mipmap/coronavirus1"
                 app:layout_constraintBottom_toTopOf="@+id/buttonImg1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

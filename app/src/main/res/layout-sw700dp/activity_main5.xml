@@ -20,8 +20,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.519" />
 
-    <ImageView
-        android:id="@+id/imageViewDark"
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/imagenApi"
         android:layout_width="555dp"
         android:layout_height="485dp"
         app:layout_constraintBottom_toTopOf="@+id/buttonEnviar"
@@ -30,6 +30,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.755"
-        app:srcCompat="@mipmap/imagen7" />
+         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,9 +10,9 @@
 
     <ScrollView
         android:id="@+id/scrollView3"
-        android:layout_width="379dp"
-        android:layout_height="329dp"
-        android:layout_marginTop="4dp"
+        android:layout_width="385dp"
+        android:layout_height="335dp"
+        android:layout_marginTop="84dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -26,10 +26,7 @@
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id neque tellus. In at libero malesuada, malesuada orci et, fringilla est. Nulla ullamcorper odio iaculis enim scelerisque, ac efficitur enim suscipit. Curabitur ac ornare nulla, in dapibus lectus. Mauris sem mi, molestie nec accumsan non, tincidunt sed arcu. Cras maximus diam sed enim posuere pellentesque. Aliquam viverra tristique augue, sed tristique est varius id. Praesent tempus, neque ut consectetur varius, nibh lorem pellentesque ante, mollis pulvinar diam augue quis dolor. Donec pulvinar lacus metus, vel venenatis tortor egestas at. Pellentesque blandit lacinia tortor quis dapibus. Nam pulvinar consequat tellus pretium laoreet. Donec eget leo enim. Nam eros ligula, tempor nec faucibus vitae, tempor vitae elit. Duis malesuada interdum placerat.
-Morbi maximus urna eu cursus tincidunt. Vestibulum eget augue ut diam pretium placerat placerat a mauris. Proin id consequat felis. Nam eu dolor nec metus euismod dignissim. Nulla blandit enim ac ante vulputate bibendum. Sed pharetra ipsum sapien, pulvinar accumsan elit semper non. Aliquam rutrum sagittis malesuada. Cras rutrum neque non est condimentum, nec tincidunt leo rhoncus. Duis quis pretium nunc. Maecenas sed egestas mauris. Pellentesque maximus dolor ut nisl finibus convallis. Nulla et elit nisi. Nunc non ante in sem condimentum ultricies eu a nisl.Donec vitae enim vestibulum, commodo sem vel, blandit tellus. Suspendisse non magna elementum, vestibulum ipsum ac, venenatis ligula. Donec dignissim libero id mi tempor molestie. Cras vitae porta purus. Quisque aliquet mollis ipsum. Donec porta sem ex, eu convallis lectus sodales a. Quisque ac urna id dui varius convallis. Donec gravida sapien vel consectetur molestie. In orci magna, bibendum in quam quis, fringilla elementum lorem. Nulla id laoreet dolor. Donec vitae rutrum nisl, et vestibulum felis. In hac habitasse platea dictumst. Mauris in dui egestas ex elementum congue.
-
-Donec tincidunt mi sit amet leo lobortis dictum ut id magna. Nullam id ex mi. Nullam lacinia mi est, in pharetra nunc gravida ac. Praesent urna felis, fringilla sit amet pellentesque eget, tempor consequat velit. Aenean hendrerit eu quam a bibendum. Praesent venenatis mauris in ultrices consectetur. Sed ultrices metus non odio iaculis, sit amet ultrices neque tincidunt. Duis vel facilisis lorem, id convallis nulla. Pellentesque convallis nisl a cursus sodales. Ut porta leo sed tempor pellentesque. Morbi fermentum ipsum auctor, tincidunt nulla eu, porta enim. Sed pharetra neque et orci lobortis scelerisque. Nam lorem purus, consectetur a sollicitudin et, ornare vel quam."
+                android:textSize="25dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -47,9 +44,10 @@ Donec tincidunt mi sit amet leo lobortis dictum ut id magna. Nullam id ex mi. Nu
         android:text="Calcular"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/scrollView3"
-        app:layout_constraintVertical_bias="0.036" />
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

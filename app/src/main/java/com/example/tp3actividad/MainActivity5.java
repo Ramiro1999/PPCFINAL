@@ -11,9 +11,15 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.LruCache;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.ImageLoader;
+import com.android.volley.toolbox.NetworkImageView;
+import com.android.volley.toolbox.Volley;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -24,9 +30,14 @@ import java.util.List;
 public class MainActivity5 extends AppCompatActivity {
 
     private Button buttonEnviar;
-    private ImageView imagen;
+   NetworkImageView imagen;
     private Drawable drawable;
     private Bitmap bitmap;
+    private double riesgo;
+    private double progreso;
+    private String esquema;
+    RequestQueue mRequestQueue;
+    ImageLoader mImageLoader;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +45,28 @@ public class MainActivity5 extends AppCompatActivity {
         setContentView(R.layout.activity_main5);
 
         buttonEnviar = findViewById(R.id.buttonEnviar);
-        imagen = findViewById(R.id.imageViewDark);
+
+        riesgo=Double.parseDouble(getIntent().getStringExtra("riesgo"));
+        progreso=Double.parseDouble(getIntent().getStringExtra("progreso"));
+        esquema= getIntent().getStringExtra("esquema");
+
+
+
+        mRequestQueue = Volley.newRequestQueue(MainActivity5.this);
+        mImageLoader = new ImageLoader(mRequestQueue, new ImageLoader.ImageCache() {
+            private final LruCache<String, Bitmap> mCache = new LruCache<String, Bitmap>(10);
+            public void putBitmap(String url, Bitmap bitmap) {
+                mCache.put(url, bitmap);
+            }
+            public Bitmap getBitmap(String url) {
+                return mCache.get(url);
+            }
+        });
+
+        imagen = findViewById(R.id.imagenApi);
+        imagen.setImageUrl("http://ppc2021.edit.com.ar/service/api/imagen/"+ riesgo +"/"+ progreso +"/"+ esquema,mImageLoader);
+
+
         buttonEnviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,6 +75,8 @@ public class MainActivity5 extends AppCompatActivity {
         });
 
     }
+
+
 
     private void enviarImagen(ImageView imagen){
         Drawable drawable = imagen.getDrawable();

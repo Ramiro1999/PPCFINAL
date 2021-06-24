@@ -61,7 +61,7 @@ public class MainActivity2 extends AppCompatActivity {
         StringRequest request = new StringRequest(Request.Method.GET, URL, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                textView.setText(response);
+                textView.setText("EL TEXTO QUE PROVIENE DE LA API ES: ".concat(response));
             }
         }, new Response.ErrorListener() {
             @Override

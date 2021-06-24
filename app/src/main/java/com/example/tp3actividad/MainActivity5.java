@@ -30,7 +30,7 @@ import java.util.List;
 public class MainActivity5 extends AppCompatActivity {
 
     private Button buttonEnviar;
-   NetworkImageView imagen;
+    NetworkImageView imagen;
     private Drawable drawable;
     private Bitmap bitmap;
     private double riesgo;

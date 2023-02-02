@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/inicio"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Inicio"/>
+
+    <item android:id="@+id/riesgo"
+        android:icon="@drawable/ic_baseline_people_alt_24"
+        android:title="Grupo de riesgo"/>
+    <item android:id="@+id/info"
+        android:icon="@drawable/ic_baseline_info_24"
+        android:title="Info paciente"/>
+    <item android:id="@+id/datos"
+        android:icon="@drawable/ic_baseline_person_add_24"
+        android:title="Carga de datos"/>
+</menu>

@@ -1,5 +1,7 @@
 package com.example.tp3actividad;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
 
@@ -7,14 +9,21 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -28,19 +37,18 @@ public class MainActivity3 extends AppCompatActivity {
     private Button botonImagen2;
     private Button botonImagen3;
     private Button botonImagen4;
-    private Button botonImagen5;
-    private Button botonImagen6;
+
     private ImageView imagen1;
     private ImageView imagen2;
     private ImageView imagen3;
     private ImageView imagen4;
-    private ImageView imagen5;
-    private ImageView imagen6;
+    ActionBar actionBar;
     private Drawable drawable;
     private Bitmap bitmap;
-
+    BottomNavigationView bottomNavigationView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTitle("Información para pacientes");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
 
@@ -48,15 +56,52 @@ public class MainActivity3 extends AppCompatActivity {
         botonImagen2 = findViewById(R.id.buttonImg2);
         botonImagen3 = findViewById(R.id.buttonImg3);
         botonImagen4 = findViewById(R.id.buttonImg4);
-        botonImagen5 = findViewById(R.id.buttonImg5);
-        botonImagen6 = findViewById(R.id.buttonImg6);
+
 
         imagen1 = findViewById(R.id.imageView1);
         imagen2 = findViewById(R.id.imageView2);
         imagen3 = findViewById(R.id.imageView3);
         imagen4 = findViewById(R.id.imageView4);
-        imagen5 = findViewById(R.id.imageView5);
-        imagen6 = findViewById(R.id.imageView6);
+
+        actionBar = getSupportActionBar();
+        actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#1C2331")));
+
+        bottomNavigationView = findViewById(R.id.bottomNavigationView3);
+
+        Menu menu = bottomNavigationView .getMenu();
+        MenuItem menuItem = menu.getItem(2);
+        menuItem.setChecked(true);
+        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+
+                switch (item.getItemId()) {
+                    case R.id.inicio:
+                        Intent intent1 = new Intent(MainActivity3.this, MainActivity.class);
+                        startActivityForResult(intent1,1);
+                        break;
+
+                    case R.id.riesgo:
+                        Intent intent2 = new Intent(MainActivity3.this, MainActivity2.class);
+                        startActivityForResult(intent2,1);
+                        break;
+
+                    case R.id.info:
+
+                        break;
+                    case R.id.datos:
+                        Intent intent4 = new Intent(MainActivity3.this, MainActivity4.class);
+                        startActivityForResult(intent4,1);
+                        break;
+
+                    default:
+
+                }
+                return true;
+            }
+        });
+
 
         botonImagen1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,19 +131,6 @@ public class MainActivity3 extends AppCompatActivity {
             }
         });
 
-        botonImagen5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                enviarImagen(imagen5);
-            }
-        });
-
-        botonImagen6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                enviarImagen(imagen6);
-            }
-        });
     }
 
 

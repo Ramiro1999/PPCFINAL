@@ -7,28 +7,36 @@
     android:orientation="vertical"
     tools:context=".MainActivity5">
 
-    <Button
-        android:id="@+id/buttonEnviar"
-        android:layout_width="317dp"
-        android:layout_height="81dp"
-        android:text="Enviar"
-        android:textSize="30dp"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.866" />
+        app:menu="@menu/bottom_nav_menu"/>
 
-    <com.android.volley.toolbox.NetworkImageView
-        android:id="@+id/imagenApi"
-        android:layout_width="555dp"
-        android:layout_height="849dp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonEnviar"
+    <Button
+        android:id="@+id/buttonEnviar"
+        android:layout_width="571dp"
+        android:layout_height="62dp"
+        android:text="Compartir"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.216" />
+        app:layout_constraintVertical_bias="0.992" />
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/imagenApi"
+        android:layout_width="666dp"
+        android:layout_height="960dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonEnviar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.323" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

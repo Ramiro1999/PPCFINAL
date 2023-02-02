@@ -7,42 +7,100 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/buttonCargaDatos"
-        android:layout_width="574dp"
-        android:layout_height="142dp"
-        android:layout_marginTop="169dp"
-        android:text="Carga de datos"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/buttonInfoPacientes"
-        app:layout_constraintVertical_bias="0.198" />
+        app:layout_constraintStart_toStartOf="parent">
+
+    </FrameLayout>
 
     <Button
         android:id="@+id/buttonGrupRiesgo"
-        android:layout_width="574dp"
-        android:layout_height="142dp"
+        android:layout_width="600dp"
+        android:layout_height="115dp"
+        android:fontFamily="sans-serif-black"
         android:text="Grupo de Riesgo"
-        android:textSize="30dp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.1" />
+        app:layout_constraintVertical_bias="0.315" />
 
     <Button
         android:id="@+id/buttonInfoPacientes"
-        android:layout_width="574dp"
-        android:layout_height="142dp"
+        android:layout_width="600dp"
+        android:layout_height="115dp"
         android:layout_marginTop="167dp"
+        android:fontFamily="sans-serif-black"
         android:text="Información para pacientes"
-        android:textSize="30dp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/buttonGrupRiesgo"
-        app:layout_constraintVertical_bias="0.127" />
+        app:layout_constraintVertical_bias="0.001" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginBottom="28dp"
+        android:background="@color/underline"
+        app:layout_constraintBottom_toTopOf="@+id/buttonInfoPacientes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonGrupRiesgo"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/buttonCargaDatos"
+        android:layout_width="600dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="169dp"
+
+        android:fontFamily="sans-serif-black"
+        android:text="Carga de datos"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buttonInfoPacientes"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginBottom="28dp"
+        android:background="@color/underline"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCargaDatos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonInfoPacientes"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.997"
+        app:menu="@menu/bottom_nav_menu">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

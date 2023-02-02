@@ -1,42 +1,91 @@
 package com.example.tp3actividad;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 
 import static java.lang.Double.parseDouble;
 
 public class MainActivity4 extends AppCompatActivity {
-
+    ActionBar actionBar;
     private Button buttonEnviar;
-    private RadioButton Si;
-    private RadioButton No;
+    Switch aSwitch;
     private EditText text1;
     private EditText text2;
     private EditText text3;
     private boolean estado;
+    BottomNavigationView bottomNavigationView;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTitle("Carga de datos");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main4);
 
-        Si = findViewById(R.id.radioButtonSi);
-        No = findViewById(R.id.radioButtonNo);
+        aSwitch = findViewById(R.id.switch1);
         text1 = findViewById(R.id.editText1);
         text2 = findViewById(R.id.editText2);
         text3 = findViewById(R.id.editText3);
 
+
+        actionBar = getSupportActionBar();
+        actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#1C2331")));
+        bottomNavigationView = findViewById(R.id.bottomNavigationView4);
+
+        Menu menu = bottomNavigationView.getMenu();
+        MenuItem menuItem = menu.getItem(3);
+        menuItem.setChecked(true);
+        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+
+                switch (item.getItemId()) {
+                    case R.id.inicio:
+                        Intent intent1 = new Intent(MainActivity4.this, MainActivity.class);
+                        startActivityForResult(intent1,1);
+                        break;
+
+                    case R.id.riesgo:
+                        Intent intent2 = new Intent(MainActivity4.this, MainActivity2.class);
+                        startActivityForResult(intent2,1);
+                        break;
+
+                    case R.id.info:
+                        Intent intent4 = new Intent(MainActivity4.this, MainActivity3.class);
+                        startActivityForResult(intent4,1);
+                        break;
+
+                    case R.id.datos:
+
+                        break;
+
+                    default:
+
+                }
+                return true;
+            }
+        });
 
         SharedPreferences preferences1 = getSharedPreferences("datos", Context.MODE_PRIVATE);
         text1.setText(preferences1.getString("paciente", ""));
@@ -46,25 +95,7 @@ public class MainActivity4 extends AppCompatActivity {
         text3.setText(preferences3.getString("progreso", ""));
         SharedPreferences preferences4 = getSharedPreferences("datos", Context.MODE_PRIVATE);
         buttonEnviar=findViewById(R.id.button);
-        Si.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(No.isChecked()){
-                    No.setChecked(false);
-                    estado = true;
-                }
-            }
-        });
 
-        No.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(Si.isChecked()){
-                    Si.setChecked(false);
-                    estado= false;
-                }
-            }
-        });
 
         buttonEnviar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -112,5 +143,13 @@ public class MainActivity4 extends AppCompatActivity {
             return false;
         }
 
+    }
+
+    public void onSwitchClick(View view) {
+        if(aSwitch.isChecked()){
+            estado=true;
+        }else{
+            estado=false;
+        }
     }
 }

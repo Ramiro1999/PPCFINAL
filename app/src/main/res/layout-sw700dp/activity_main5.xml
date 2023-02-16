@@ -22,6 +22,7 @@
         android:layout_height="62dp"
         android:text="Compartir"
         android:textSize="24sp"
+        app:icon="@drawable/share"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"

@@ -24,11 +24,12 @@
 
             <Button
                 android:id="@+id/buttonImg4"
-                android:layout_width="153dp"
+                android:layout_width="190dp"
                 android:layout_height="72dp"
                 android:layout_marginTop="528dp"
                 android:text="Compartir"
                 android:textSize="18sp"
+                app:icon="@drawable/share"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/imageView4"
@@ -61,11 +62,12 @@
 
             <Button
                 android:id="@+id/buttonImg3"
-                android:layout_width="153dp"
+                android:layout_width="190dp"
                 android:layout_height="72dp"
                 android:layout_marginTop="528dp"
                 android:text="Compartir"
                 android:textSize="18sp"
+                app:icon="@drawable/share"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/imageView3" />
@@ -97,11 +99,12 @@
 
             <Button
                 android:id="@+id/buttonImg2"
-                android:layout_width="153dp"
+                android:layout_width="190dp"
                 android:layout_height="72dp"
                 android:layout_marginTop="528dp"
                 android:text="Compartir"
                 android:textSize="18sp"
+                app:icon="@drawable/share"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/imageView2" />
@@ -142,11 +145,12 @@
 
             <Button
                 android:id="@+id/buttonImg1"
-                android:layout_width="153dp"
+                android:layout_width="190dp"
                 android:layout_height="72dp"
                 android:layout_marginTop="528dp"
                 android:text="Compartir"
                 android:textSize="18sp"
+                app:icon="@drawable/share"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.499"
                 app:layout_constraintStart_toStartOf="parent"
